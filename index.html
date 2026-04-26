@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Matt Hollingshead | Technical SEO Consultant</title>
+<meta name="description" content="Technical SEO for product and engineering teams. Audits, migrations, and JavaScript SEO for problems that don't show up in tool dashboards." />
+
+<!-- Canonical -->
+<link rel="canonical" href="https://matthollingshead.com/" />
+
+<!-- Robots -->
+<meta name="robots" content="index, follow, max-image-preview:large" />
+
+<!-- Favicon (replace with real assets) -->
+<link rel="icon" href="favicon.ico" sizes="any" />
+<link rel="icon" href="icon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile" />
+<meta property="og:site_name" content="Matt Hollingshead" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:title" content="Matt Hollingshead | Technical SEO Consultant" />
+<meta property="og:description" content="Audits, migrations, and JavaScript SEO for the problems that don't show up in tool dashboards." />
+<meta property="og:url" content="https://matthollingshead.com/" />
+<meta property="og:image" content="https://matthollingshead.com/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="profile:first_name" content="Matt" />
+<meta property="profile:last_name" content="Hollingshead" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Matt Hollingshead | Technical SEO Consultant" />
+<meta name="twitter:description" content="Audits, migrations, and JavaScript SEO for the problems that don't show up in tool dashboards." />
+<meta name="twitter:image" content="https://matthollingshead.com/og.jpg" />
+
+<!-- Theme color -->
+<meta name="theme-color" content="#1f4ad6" />
+
+<!-- Self-hosted fonts. Preload only the two most-used files for above-the-fold content. -->
+<link rel="preload" href="fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin />
+
+<!-- JSON-LD: Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Matt Hollingshead",
+  "jobTitle": "Technical SEO Consultant",
+  "description": "Technical SEO consultant helping product and engineering teams with audits, migrations, and JavaScript SEO.",
+  "url": "https://matthollingshead.com/",
+  "email": "matt@matthollingshead.com",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Matt Hollingshead Digital Inc.",
+    "url": "https://matthollingshead.com/"
+  },
+  "knowsAbout": [
+    "Technical SEO",
+    "Site Migrations",
+    "JavaScript SEO",
+    "Crawl Budget Optimization",
+    "Indexation",
+    "Site Architecture",
+    "Faceted Navigation",
+    "Log File Analysis",
+    "Core Web Vitals"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/m-hollingshead/",
+    "https://github.com/matthollingshead94"
+  ]
+}
+</script>
+
+<!--
+  JSON-LD: FAQPage
+  Note (April 2026): Google restricted FAQ rich results to government and
+  health sites in 2023, and retained FAQPage as a supported type in their
+  June 2025 schema simplification. Including it remains useful for AI
+  search retrieval (Gemini, ChatGPT, Bing Copilot) and entity understanding,
+  even without traditional rich-result visibility.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What size site do you work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Work tends to be most valuable past 10k indexable pages, where small technical decisions start compounding. I'll tell you in our first call whether your project is a fit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you implement changes yourself, or work through our engineering team?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I work through your engineering team. I write specs detailed enough to hand to a developer who isn't an SEO, and I'm available during implementation for questions and review. If you don't have engineering capacity, I can point you to people who do."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long until I see results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Crawling and indexation fixes show up in days or weeks. Ranking and traffic improvements depend on what's been holding the site back and how often Google crawls you. I'll give you an honest range during the audit, not a number meant to win the deal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle content or link building?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. I focus on the technical layer: crawling, rendering, indexation, and architecture. Happy to recommend people I trust for the rest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does an engagement cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Audits start at $8k. Migrations and retainers are scoped per project. I send a fixed quote after a first call."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  /*
+    Self-hosted fonts. Download WOFF2 files from https://gwfh.mranftl.com/fonts
+    (Inter weights 400 + 500; Instrument Serif regular + italic, "Latin" subset).
+    Place them in a /fonts/ folder next to this index.html and rename to:
+      fonts/inter-400.woff2
+      fonts/inter-500.woff2
+      fonts/instrument-serif.woff2
+      fonts/instrument-serif-italic.woff2
+    Paths are relative so this works on both custom domains and github.io subpaths.
+  */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/inter-400.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('fonts/inter-500.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Instrument Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/instrument-serif.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Instrument Serif';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/instrument-serif-italic.woff2') format('woff2');
+  }
+
+  :root {
+    --blue:    #1f4ad6;
+    --ink:     #111418;
+    --text:    #2b3038;
+    --muted:   #6b7280;
+    --rule:    #e8e7e1;
+    --paper:   #fbfbf9;
+    --avatar-bg: #e6ecff;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Skip link */
+  .skip {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  .skip:focus {
+    position: fixed;
+    left: 16px;
+    top: 16px;
+    width: auto;
+    height: auto;
+    padding: 10px 16px;
+    background: var(--ink);
+    color: #fff;
+    z-index: 100;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+  a {
+    color: var(--blue);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    transition: opacity .15s ease;
+  }
+  a:hover { opacity: .7; }
+  a:focus { outline: none; }
+  a:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  main {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 96px 28px 64px;
+  }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 40px;
+    background: var(--avatar-bg);
+  }
+  .avatar svg, .avatar img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  h1 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 0 0 24px;
+  }
+  h1 i { font-style: italic; color: var(--blue); }
+
+  h2 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--blue);
+    margin: 0 0 20px;
+    letter-spacing: -0.005em;
+  }
+
+  p {
+    font-size: 17px;
+    margin: 0 0 20px;
+    color: var(--text);
+  }
+  p.muted { color: var(--muted); }
+
+  section {
+    margin-top: 64px;
+    padding-top: 48px;
+    border-top: 1px solid var(--rule);
+  }
+
+  /* Services list */
+  .service-item { margin-bottom: 28px; }
+  .service-item:last-child { margin-bottom: 0; }
+  .service-item h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    margin: 0 0 6px;
+  }
+  .service-item p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  /* Writing list */
+  .writing-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .writing-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 16px;
+  }
+  .writing-item:last-child { border-bottom: none; }
+  .writing-item a {
+    border-bottom: none;
+    color: var(--ink);
+    flex: 1;
+  }
+  .writing-item a:hover { color: var(--blue); opacity: 1; }
+  .writing-item .date {
+    color: var(--muted);
+    font-size: 13px;
+    letter-spacing: .04em;
+    white-space: nowrap;
+    padding-top: 2px;
+  }
+
+  /* FAQ section, semantic <dl> */
+  .faq { margin: 0; }
+  .faq dt {
+    font-weight: 500;
+    margin: 0 0 6px;
+    font-size: 16px;
+    color: var(--ink);
+  }
+  .faq dd {
+    margin: 0 0 24px;
+    color: var(--muted);
+    font-size: 15px;
+  }
+  .faq dd:last-child { margin-bottom: 0; }
+
+  .cta {
+    margin-top: 32px;
+  }
+  .cta a {
+    font-weight: 500;
+  }
+
+  footer {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 0 28px 56px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .footer-inner {
+    border-top: 1px solid var(--rule);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  footer p { margin: 0; }
+  .footer-social a {
+    color: var(--muted);
+    border-bottom-color: rgba(107, 114, 128, .35);
+    margin-right: 14px;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .footer-social a:last-child { margin-right: 0; }
+  .footer-social a:hover {
+    color: var(--ink);
+    border-bottom-color: var(--ink);
+    opacity: 1;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+
+  @media (max-width: 600px) {
+    main { padding-top: 64px; }
+    h1 { font-size: 36px; }
+    .writing-item { flex-direction: column; gap: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip">Skip to content</a>
+
+<main id="main">
+
+  <!-- Avatar: role="img" + aria-label so the SVG placeholder is announced as an image.
+       To use a real photo, replace this entire block with:
+       <div class="avatar"><img src="profile.jpg" alt="Matt Hollingshead" width="96" height="96" /></div>
+       Note: when swapping to <img>, also remove role="img" and aria-label from the wrapping
+       div, since the <img alt="..."> already provides the accessible name.
+       The width/height attributes prevent layout shift while the photo loads. -->
+  <div class="avatar" role="img" aria-label="Portrait of Matt Hollingshead">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <rect width="100" height="100" fill="#e6ecff"/>
+      <circle cx="50" cy="40" r="16" fill="#1f4ad6" opacity=".85"/>
+      <path d="M20 92 Q20 62 50 62 Q80 62 80 92 Z" fill="#1f4ad6" opacity=".85"/>
+    </svg>
+  </div>
+
+  <h1>Matt Hollingshead — <i>technical SEO</i> consultant.</h1>
+
+  <p>I work with product and engineering teams on the technical SEO problems that don't show up in tool dashboards but show up in your traffic.</p>
+
+  <p class="cta"><a href="https://calendly.com/matt-matthollingshead/initial-consultation">Book a free consultation <span aria-hidden="true">&rarr;</span></a></p>
+
+  <!-- SERVICES -->
+  <section aria-labelledby="services-heading">
+    <h2 id="services-heading">Services</h2>
+
+    <div class="service-item">
+      <h3>Technical SEO audits</h3>
+      <p>A two-to-three week deep dive into crawling, rendering, indexation, and architecture. You get a prioritized list of fixes ranked by what's actually costing you traffic.</p>
+    </div>
+
+    <div class="service-item">
+      <h3>Site migrations</h3>
+      <p>Replatforms, domain changes, and IA overhauls planned and shipped without leaking organic traffic.</p>
+    </div>
+
+    <div class="service-item">
+      <h3>JavaScript SEO</h3>
+      <p>Rendering, hydration, and indexation issues on React, Vue, Next.js, and other JS-heavy stacks. Including the ones Search Console doesn't surface.</p>
+    </div>
+
+    <div class="service-item">
+      <h3>Embedded advisory</h3>
+      <p>I sit in on design and sprint reviews so SEO doesn't get bolted on at the end. Monthly retainer.</p>
+    </div>
+  </section>
+
+  <!-- HOW I WORK -->
+  <section aria-labelledby="process-heading">
+    <h2 id="process-heading">How I work</h2>
+    <p>Most projects kick off with a two-to-three week audit focused on what's actually costing you traffic, not on tool severity scores. After that, I either hand off to your team with implementation specs, or stay on as an embedded advisor.</p>
+    <p>I don't subcontract. I don't manage junior consultants. The client list stays small on purpose.</p>
+  </section>
+
+  <!-- WRITING -->
+  <section aria-labelledby="writing-heading">
+    <h2 id="writing-heading">Writing</h2>
+
+    <ul class="writing-list" role="list">
+      <li class="writing-item">
+        <a href="#">Why your render budget matters more than your crawl budget</a>
+        <span class="date"><time datetime="2026-03">Mar 2026</time></span>
+      </li>
+      <li class="writing-item">
+        <a href="#">A field guide to surviving a CMS migration</a>
+        <span class="date"><time datetime="2026-01">Jan 2026</time></span>
+      </li>
+      <li class="writing-item">
+        <a href="#">Faceted navigation: when to noindex, when to canonical, when to block</a>
+        <span class="date"><time datetime="2025-11">Nov 2025</time></span>
+      </li>
+      <li class="writing-item">
+        <a href="#">Reading server logs without losing your mind</a>
+        <span class="date"><time datetime="2025-09">Sep 2025</time></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- FAQ -->
+  <section aria-labelledby="faq-heading">
+    <h2 id="faq-heading">Common questions</h2>
+
+    <dl class="faq">
+      <dt>What size site do you work with?</dt>
+      <dd>Work tends to be most valuable past 10k indexable pages, where small technical decisions start compounding. I'll tell you in our first call whether your project is a fit.</dd>
+
+      <dt>Do you implement changes yourself, or work through our engineering team?</dt>
+      <dd>I work through your engineering team. I write specs detailed enough to hand to a developer who isn't an SEO, and I'm available during implementation for questions and review. If you don't have engineering capacity, I can point you to people who do.</dd>
+
+      <dt>How long until I see results?</dt>
+      <dd>Crawling and indexation fixes show up in days or weeks. Ranking and traffic improvements depend on what's been holding the site back and how often Google crawls you. I'll give you an honest range during the audit, not a number meant to win the deal.</dd>
+
+      <dt>Do you handle content or link building?</dt>
+      <dd>No. I focus on the technical layer: crawling, rendering, indexation, and architecture. Happy to recommend people I trust for the rest.</dd>
+
+      <dt>What does an engagement cost?</dt>
+      <dd>Audits start at $8k. Migrations and retainers are scoped per project. I send a fixed quote after a first call.</dd>
+    </dl>
+  </section>
+
+  <!-- CONTACT -->
+  <section aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Get in touch</h2>
+    <p>Most projects start with a 30-minute call to talk through the site and where things are stuck. No prep needed.</p>
+    <p class="cta"><a href="https://calendly.com/matt-matthollingshead/initial-consultation">Book a free consultation <span aria-hidden="true">&rarr;</span></a></p>
+    <p class="muted">Or email <a href="mailto:matt@matthollingshead.com">matt@matthollingshead.com</a>.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>&copy; <span id="year">2026</span> Matt Hollingshead Digital Inc.</p>
+    <p class="footer-social">
+      <a href="https://www.linkedin.com/in/m-hollingshead/" rel="me">LinkedIn</a>
+      <a href="https://github.com/matthollingshead94" rel="me">GitHub</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
